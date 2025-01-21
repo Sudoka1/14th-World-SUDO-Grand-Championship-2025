@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDO Championship 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #283593;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .countdown {
+            text-align: center;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .category {
+            background-color: white;
+            border: 2px solid #283593;
+            border-radius: 10px;
+            width: 300px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .category h2 {
+            margin-top: 0;
+            color: #283593;
+        }
+
+        .participants {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .participant {
+            background-color: #e3f2fd;
+            border: 1px solid #64b5f6;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .participant img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #283593;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SUDO Championship 2025</h1>
+        <p>29 ноября 2025 года</p>
+    </header>
+
+    <div class="countdown" id="countdown"></div>
+
+    <div class="categories">
+        <div class="category">
+            <h2>Весовая категория: -67 кг</h2>
+            <div class="participants">
+                <div class="participant"><img src="participant1.jpg" alt="Участник 1"></div>
+                <div class="participant"><img src="participant2.jpg" alt="Участник 2"></div>
+                <div class="participant"><img src="participant3.jpg" alt="Участник 3"></div>
+                <div class="participant"><img src="participant4.jpg" alt="Участник 4"></div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Весовая категория: -74 кг</h2>
+            <div class="participants">
+                <div class="participant"><img src="participant5.jpg" alt="Участник 1"></div>
+                <div class="participant"><img src="participant6.jpg" alt="Участник 2"></div>
+                <div class="participant"><img src="participant7.jpg" alt="Участник 3"></div>
+                <div class="participant"><img src="participant8.jpg" alt="Участник 4"></div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Весовая категория: -81 кг</h2>
+            <div class="participants">
+                <div class="participant"><img src="participant9.jpg" alt="Участник 1"></div>
+                <div class="participant"><img src="participant10.jpg" alt="Участник 2"></div>
+                <div class="participant"><img src="participant11.jpg" alt="Участник 3"></div>
+                <div class="participant"><img src="participant12.jpg" alt="Участник 4"></div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Весовая категория: +81 кг</h2>
+            <div class="participants">
+                <div class="participant"><img src="participant13.jpg" alt="Участник 1"></div>
+                <div class="participant"><img src="participant14.jpg" alt="Участник 2"></div>
+                <div class="participant"><img src="participant15.jpg" alt="Участник 3"></div>
+                <div class="participant"><img src="participant16.jpg" alt="Участник 4"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SUDO Championship. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function updateCountdown() {
+            const championshipDate = new Date('2025-11-29T00:00:00');
+            const now = new Date();
+            const diff = championshipDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').textContent = `До чемпионата осталось: ${days} д. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
